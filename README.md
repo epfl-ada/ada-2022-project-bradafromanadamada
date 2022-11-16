@@ -1,7 +1,7 @@
-# Interest shift for ecology during the pandemic
+# Interest shift in ecology during the pandemic
 
 ## Abstract
-Ecology, a very simple term, but everyone has heard of it and has their opinion on the subject. We know that humanity will need to face more and more crisis (such as energetic crisis, environmental crisis, etc...) in the upcoming days. One can wonder how a big crisis such as the pandemic has affected the interest of ecology, during the crisis and also after. Through the view counts of Wikipedia articles and google search around the pandemic to represent the interest on the topic, we will try to determine if there is a some correlation with the state of the country at that specific time (through the number of COVID death at that time for example). 
+Ecology, a very simple term, but everyone has heard of it and has their opinion on the subject. We know that humanity will need to face more and more crisis (such as energetic crisis, political crisis, etc...) in the upcoming times. One can wonder how a big crisis such as the pandemic has affected the interest of ecology, during the crisis and also after. Through the view counts of Wikipedia articles and google search around the pandemic to represent the interest on the topic, we will try to determine if there is a some correlation with the state of the country at that specific time (through the number of COVID death at that time for example). 
 
 ## Research questions
 
