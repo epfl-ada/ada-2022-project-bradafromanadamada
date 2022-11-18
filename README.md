@@ -8,15 +8,15 @@ The main research question is, how did the covid crisis impact the population's 
 
 First 
 
-  - How did the covid crisis impact people's lifestyle, their mobility and localisation ?
-  - Is the moblitiy evolution correlated with a higher number of overall google seaches ?
-  - Globably, did interest for ecology change during the covid pandemic ? 
-  - How did the severity of lockdown in a country have an impact on the disinterest toward ecological topics ? (Does a more severe lockdown increases the observed trends ?)
-  - Which subjects within the theme of climate change gained or lost popularity during the lockdown period ?
+  1. How did the covid crisis impact people's lifestyle, their mobility and localization ?
+  2. Is the mobility evolution correlated with a higher number of overall google searches ?
+  3. Globally, did interest for ecology change during the covid pandemic ? 
+  4. How did the severity of lockdown in a country have an impact on the disinterest toward ecological topics ? (Does a more severe lockdown increases the observed trends ?)  
+  5. Which subjects within the theme of climate change gained or lost popularity during the lockdown period ?
  
  Finally,
  
- - How to maintain awarness on the ecological questions during a world crisis ? and propose some guidelines on how to do it.
+  6. How to maintain awareness on the ecological questions during a world crisis ? and propose some guidelines on how to do it.
 
 ## Additional dataset
 *  [**View counts of wikipedia articles**](data/added_data/massviews-20180101-20220101.csv) in the category [Climate_change](https://en.wikipedia.org/wiki/Category:Climate_change), data taken using [massviews](https://pageviews.wmcloud.org/massviews/) across the period of time 01-01-2018 to 01-01-2022. It is also possible to look for the view count of the Wikipedia articles in different languages, allowing the possibility to compare between them. <br>
@@ -27,6 +27,44 @@ These datasets allow us to have a more precise information on the interest for t
 
 ## Methods
 
+### Look for additional dataset
+
+Find trustworthy dataset to help our analysis and have more meaningful information for our analysis (look at [Additional dataset](#additional-dataset) for more detail on which dataset where added and their use)
+
+### Global analysis of the datasets
+
+Clean the datasets to keep the wanted information and do basic plots the data with our datasets, to have an overview of trends (f.ex polynomial regression) and the behavior across the period of COVID (this allows the possibility to answer the first question)
+
+### Cross analysis
+
+Do some cross analysis between the different datasets, to find some correlations and have more insightful analysis on what impact certain decisions have on the behavior of the people (for example the lockdown on specific wikipedia searches) (this will allow to answer questions 2 to 5)
+
+### Regroup the results
+
+With the results obtained so far, look for which factors have helped or not the interest in climate change and try to imagine what should be done for a possible next crisis to avoid an interest lost in ecology (question 6)
+
+### GitHub site
+
+Regroup the results and present them in GitHub website in an interesting and meaningful presentation.  
+
 ## Proposed timeline
 
+* $\rightarrow$ 7/11/2022: [**look for additional dataset**](#look-for-additional-dataset)
+
+* $\rightarrow$ 18/11/2022: [**global analysis**](#global-analysis-of-the-datasets)
+
+* $\rightarrow$ 4/12/2022: [**cross analysis**](#cross-analysis)
+
+* $\rightarrow$ 11/12/2022: [**conclusion**](#regroup-the-results)
+
+* $\rightarrow$ 18/12/2022: [**website**](#github-site)
+
 ## Organization within the team
+
+* **Arthur**:
+* **Valentin**:
+* **Salomé**:
+* **Dayan**:
+
+
+
