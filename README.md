@@ -5,14 +5,18 @@ Ecology, a very simple term, but everyone has heard of it and has their opinion 
 
 ## Research questions
 The main research question is, how did the covid crisis impact the population's attitude towards climate change? This questions can be subdivided into multiple steps to be answered through data analysis. 
+
 First 
+
   - How did the covid crisis impact people's lifestyle, their mobility and localisation ?
   - Is the moblitiy evolution correlated with a higher number of overall google seaches ?
   - Globably, did interest for ecology change during the covid pandemic ? 
   - How did the severity of lockdown in a country have an impact on the disinterest toward ecological topics ? (Does a more severe lockdown increases the observed trends ?)
   - Which subjects within the theme of climate change gained or lost popularity during the lockdown period ?
+ 
  Finally,
-  - How to maintain awarness on the ecological questions during a world crisis ? and propose some guidelines on how to do it.
+ 
+ - How to maintain awarness on the ecological questions during a world crisis ? and propose some guidelines on how to do it.
 
 ## Additional dataset
 *  [**View counts of wikipedia articles**](data/added_data/massviews-20180101-20220101.csv) in the category [Climate_change](https://en.wikipedia.org/wiki/Category:Climate_change), data taken using [massviews](https://pageviews.wmcloud.org/massviews/) across the period of time 01-01-2018 to 01-01-2022. It is also possible to look for the view count of the Wikipedia articles in different languages, allowing the possibility to compare between them. <br>
