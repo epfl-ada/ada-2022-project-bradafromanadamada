@@ -1,38 +1,10 @@
+#Utilitary functions from https://github.com/epfl-dlab/wiki_pageviews_covid
+# ===============================================================================================================================================
 import os
 import gzip
 import json
 import pickle
 import pandas as pd
-
-
-def load_topics(topics_path='../data/topics_linked.csv.xz'):
-    df_topics = pd.read_csv(topics_path, compression="infer")
-    topics = df_topics.columns[1:-1]
-    return df_topics, sorted(list(topics))
-
-
-def load_interventions(interventions_path='../data/interventions.csv'):
-    # Loads intervention
-    interventions_df = pd.read_csv(interventions_path)
-    for col in interventions_df.columns:
-        if col != "lang":
-            interventions_df.loc[:, col] = pd.to_datetime(interventions_df.loc[:, col])
-    interventions = {}
-    for _, lang_info in interventions_df.T.to_dict().items():
-        lang = lang_info['lang']
-        del lang_info['lang']
-        interventions[lang] = {k: t for k, t in lang_info.items() if not pd.isnull(t)}
-    return interventions
-
-def load_pca(codes_order, pca_folder="../data/pca/"):
-    dfs_pca_shift = {}
-    for lang in codes_order:
-        path = os.path.join(pca_folder, '_'.join([lang + '.comb', 'PCA', 'shift.f']))
-        df = pd.read_feather(path).set_index('index')
-        df.index = pd.to_datetime(df.index)
-        dfs_pca_shift[lang] = df
-    return dfs_pca_shift
-
 
 def load_aggregated(aggregated_path="../data/aggregated.p"):
     if aggregated_path.endswith(".gz"):
@@ -65,24 +37,40 @@ def load_aggregated(aggregated_path="../data/aggregated.p"):
                                 agg[k1][k2][k3][k4].index = pd.to_datetime(agg[k1][k2][k3][k4].index, errors="ignore")
     return agg
 
-
-def load_from_pickle(filename):
-    with open(filename, 'rb') as f:
-        obj = pickle.load(f)
-    return obj
-
-
-def save_to_pickle(filename, obj):
-    with open(filename, 'wb') as f:
-        pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
-
-
-def create_folder(path, folder_name):
-    folder_path = f'{path}/{folder_name}'
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-    return folder_path
+def load_interventions(interventions_path='data/interventions.csv'):
+    # Loads intervention
+    interventions_df = pd.read_csv(interventions_path)
+    for col in interventions_df.columns:
+        if col != "lang":
+            interventions_df.loc[:, col] = pd.to_datetime(interventions_df.loc[:, col])
+    interventions = {}
+    for _, lang_info in interventions_df.T.to_dict().items():
+        lang = lang_info['lang']
+        del lang_info['lang']
+        interventions[lang] = {k: t for k, t in lang_info.items() if not pd.isnull(t)}
+    return interventions
 
 
-def get_rel_path(rel_path, filename, ending, prefix=None, suffix=None):
-    return f'{rel_path}/{prefix + "_" if prefix else ""}{filename}{"_" + suffix if suffix else ""}.{ending}'
+
+def load_topics(topics_path='data/topics_linked.csv.xz'):
+    df_topics = pd.read_csv(topics_path, compression="infer")
+    topics = df_topics.columns[1:-1]
+    return df_topics, sorted(list(topics))
+#============================================================================================================================================
+#Own utilitary functions 
+
+
+def dataframe_from_wikijson(url):
+    df = pd.read_json(url)
+    df['views'] = df['items'].apply(lambda x: x['views'])
+    df['timestamp'] = df['items'].apply(lambda x: x['timestamp'])
+    df['timestamp'] = pd.to_datetime(df['timestamp'], format='%Y%m%d%H')
+    return df
+
+# for example lang = 'en'
+def wiki_url(lang, topic, start, end):
+    #verfiy correct format for start and end
+    if len(start) != 8 or len(end) != 8:
+        print("start and end must be in the format YYYYMMDD")
+        return
+    return "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"+lang+".wikipedia/all-access/all-agents/"+topic+"/monthly/"+start+"00/"+end+"00"
