@@ -4,6 +4,15 @@
 Ecology, a very simple term, but everyone has heard of it and has their opinion on the subject. We know that humanity will need to face more and more crisis (such as energetic crisis, political crisis, etc...) in the upcoming times. One can wonder how a big crisis such as the pandemic has affected the interest of ecology, during the crisis and also after. Through the view counts of Wikipedia articles and google search around the pandemic to represent the interest on the topic, we will try to determine if there is a some correlation with the state of the country at that specific time (through the number of COVID death at that time for example). 
 
 ## Research questions
+The main research question is, how did the covid crisis impact the population's attitude towards climate change? This questions can be subdivided into multiple steps to be answered through data analysis. 
+First 
+  - How did the covid crisis impact people's lifestyle, their mobility and localisation ?
+  - Is the moblitiy evolution correlated with a higher number of overall google seaches ?
+  - Globably, did interest for ecology change during the covid pandemic ? 
+  - How did the severity of lockdown in a country have an impact on the disinterest toward ecological topics ? (Does a more severe lockdown increases the observed trends ?)
+  - Which subjects within the theme of climate change gained or lost popularity during the lockdown period ?
+ Finally,
+  - How to maintain awarness on the ecological questions during a world crisis ? and propose some guidelines on how to do it.
 
 ## Additional dataset
 *  [**View counts of wikipedia articles**](data/added_data/massviews-20180101-20220101.csv) in the category [Climate_change](https://en.wikipedia.org/wiki/Category:Climate_change), data taken using [massviews](https://pageviews.wmcloud.org/massviews/) across the period of time 01-01-2018 to 01-01-2022. It is also possible to look for the view count of the Wikipedia articles in different languages, allowing the possibility to compare between them. <br>
