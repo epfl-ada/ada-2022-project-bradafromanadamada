@@ -59,7 +59,7 @@ With the results obtained so far, we come up with possible guidelines for each c
 
 * **Arthur**:  Preliminary analysis, Website text, Notebook maintenance
 * **Valentin**: Differential topic pageviews analysis, Summary and visualisation by country
-* **Salomé**: Mobility analysis and mpact factor relation cross-analysis, Website text
+* **Salomé**: Mobility analysis and impact factor relation cross-analysis, Website text
 * **Dayan**: GitHub website and Wikipedia Massviews requests, Sentiment analysis annotation
 
 
