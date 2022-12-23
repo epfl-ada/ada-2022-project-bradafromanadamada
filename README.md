@@ -1,7 +1,7 @@
 # Interest shift in ecology during the pandemic
 ## Are we facing a climate awareness pandemic ?
 You will find all the data and analysis used to write our data story in this git repository.
-To access the website please clic [here](#https://dayan9265.github.io/climate-change-awereness-pandemic/)!
+To access the website please clic [here](https://dayan9265.github.io/climate-change-awereness-pandemic/)!
 ## Abstract
 In 2019, the global climate movement was gaining momentum, especially in the young population, through the School Strike for Climate movement. As for many social movements, this was brutally stopped by the Covid-19 pandemic, though the urgency of the climate situation remains. Through the view counts evolution of Wikipedia articles one can try to understand how a big crisis such as the pandemic has affected the population's interest in ecology. We will also consider the state of the country at that specific time (through the level of mobility restriction) and assess its impact on attitude towards ecology. More specifically we will analyse positive and negative sentiment associated with articles which emerged or regressed during this time. 
 
