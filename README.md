@@ -1,7 +1,7 @@
 # Interest shift in ecology during the pandemic
 ## Are we facing a climate awareness pandemic ?
 You will find all the data and analysis used to write our data story in this git repository.
-To access the website please clic [here](https://dayan9265.github.io/climate-change-awereness-pandemic/)!
+To access the website please click [here](https://dayan9265.github.io/climate-change-awereness-pandemic/)!
 ## Abstract
 In 2019, the global climate movement was gaining momentum, especially in the young population, through the School Strike for Climate movement. As for many social movements, this was brutally stopped by the Covid-19 pandemic, though the urgency of the climate situation remains. Through the view counts evolution of Wikipedia articles one can try to understand how a big crisis such as the pandemic has affected the population's interest in ecology. We will also consider the state of the country at that specific time (through the level of mobility restriction) and assess its impact on attitude towards ecology. More specifically we will analyse positive and negative sentiment associated with articles which emerged or regressed during this time. 
 
@@ -22,7 +22,7 @@ First
 
 ## Additional dataset
 *  [**View counts of wikipedia articles**](data/added_data/massviews-20180101-20220101.csv) in the category [Climate_change](https://en.wikipedia.org/wiki/Category:Climate_change), data taken using [massviews](https://pageviews.wmcloud.org/massviews/) across the period of time 01-01-2018 to 01-01-2022. It is also possible to look for the view count of the Wikipedia articles in different languages, allowing the possibility to compare them. <br>
-Views were taken for the following languages : English, German, French, Italian, Norwegian, Danish, Dutch and Swedisch
+Views were taken for the following languages : English, German, French, Italian, Norwegian, Danish, Dutch and Swedish
 
 ## Methods
 
@@ -32,7 +32,7 @@ We found additional Wikipedia datasets through MassViews, to help our analysis a
 
 ### Global analysis of the datasets
 
-Clean and reformate the datasets to keep the wanted information and do basic plots of the data with our datasets, to have an overview of trends and the behaviour across the COVID period (this allows the possibility to answer the first question). For this we analyzed the mobility datasets, extracting weekly patterns and differences between countries. We also evaluated the overal search in Wikipedia articles, as well as the one directly linked to 'Climate change'.
+Clean and re-formate the datasets to keep the wanted information and do basic plots of the data with our datasets, to have an overview of trends and the behavior across the COVID period (this allows the possibility to answer the first question). For this we analyzed the mobility datasets, extracting weekly patterns and differences between countries. We also evaluated the overall search in Wikipedia articles, as well as the one directly linked to 'Climate change'.
 
 ### Cross-analysis
 
