@@ -1,17 +1,19 @@
 # Interest shift in ecology during the pandemic
-
+## Are we facing a climate awareness pandemic ?
+You will find all the data and analysis used to write our data story in this git repository.
+To access the website please clic [here](#https://dayan9265.github.io/climate-change-awereness-pandemic/)!
 ## Abstract
-In 2019, the global climate movement was gaining momentum, especially in the young population, through the School Strike for Climate movement. As for many social movements, this was brutally stopped by the Covid-19 pandemic, though the urgency of the climate situation remains. Through the view counts of Wikipedia articles and google searches around environmental topics, one can try to understand how a big crisis such as the pandemic has affected the population's interest in ecology. We will also consider the state of the country at that specific time (through the number of COVID deaths at that time, the level of mobility restriction, etc.) and assess its impact on attitude towards ecology. 
+In 2019, the global climate movement was gaining momentum, especially in the young population, through the School Strike for Climate movement. As for many social movements, this was brutally stopped by the Covid-19 pandemic, though the urgency of the climate situation remains. Through the view counts evolution of Wikipedia articles one can try to understand how a big crisis such as the pandemic has affected the population's interest in ecology. We will also consider the state of the country at that specific time (through the level of mobility restriction) and assess its impact on attitude towards ecology. More specifically we will analyse positive and negative sentiment associated with articles which emerged or regressed during this time. 
 
 ## Research questions
 The main research question is, how did the covid crisis impact the population's attitude towards climate change? These questions can be subdivided into multiple steps to be answered through data analysis. 
 
 First 
 
-  1. How did the covid crisis impact people's lifestyle, mobility and localization ?
-  2. Is the mobility evolution correlated with a higher number of overall google searches?
-  3. Globally, did interest in ecology change during the covid pandemic? 
-  4. How did the severity of lockdown in a country have an impact on the disinterest toward ecological topics? (Does a more severe lockdown increases the observed trends?)  
+  1. How did the covid crisis impact people’s lifestyle, mobility and localization ?
+  2. Is the mobility evolution correlated with a higher number of overall Wikipedia searches?
+  3. Overall, how did interest in ecology change during the covid pandemic?
+  4. How did the severity of lockdown in a country have an impact on the disinterest toward ecological topics? (Does a more severe lockdown increase the observed trends?) 
   5. Which subjects within the theme of climate change gained or lost popularity during the lockdown period?
  
  Finally,
@@ -20,32 +22,26 @@ First
 
 ## Additional dataset
 *  [**View counts of wikipedia articles**](data/added_data/massviews-20180101-20220101.csv) in the category [Climate_change](https://en.wikipedia.org/wiki/Category:Climate_change), data taken using [massviews](https://pageviews.wmcloud.org/massviews/) across the period of time 01-01-2018 to 01-01-2022. It is also possible to look for the view count of the Wikipedia articles in different languages, allowing the possibility to compare them. <br>
-* [**Covid data**](data/added_data/owid-covid-data.csv.gz). Data on the number of COVID cases and COVID death per country and across time, data taken from [Our World in data (WHO)](https://ourworldindata.org/covid-cases) <br>
-* [**Google trend**](data/added_data/EcologyWorldTrend.csv). Google trend data on the term `Ecology` ([Google trend](https://trends.google.fr/trends/) is a tool from Google to analyse the number of google search on a specific topic) <br>
-* [**Air quality**](data\added_data\airquality_data_2020_concat.csv.gz). Quality of the air during the COVID period, data per country/region (taken from the [European Environment Agency](https://www.eea.europa.eu/themes/air/air-quality-and-covid19)) for different pollutants (C0, NO3, SO2, pm10, pm25) <br>
-These datasets allow us to have more precise information on the interest for climate change and to compare the results with the state of the world (in terms of the air quality and the COVID pandemic) at that time.  
+Views were taken for the following languages : English, German, French, Italian, Norwegian, Danish, Dutch and Swedisch
 
 ## Methods
 
 ### Look for additional dataset
 
-Find trustworthy and robust datasets to help our analysis and have more meaningful information for our analysis (look at [Additional dataset](#additional-dataset) for more detail on which datasets were added and their use)
+We found additional Wikipedia datasets through MassViews, to help our analysis and have more meaningful information on the detailed Wikipedia articles (look at [Additional dataset](#additional-dataset) for more detail on which datasets were added and their use)
 
 ### Global analysis of the datasets
 
-Clean and reformate the datasets to keep the wanted information and do basic plots of the data with our datasets, to have an overview of trends (f.ex polynomial regression) and the behaviour across the COVID period (this allows the possibility to answer the first question)
+Clean and reformate the datasets to keep the wanted information and do basic plots of the data with our datasets, to have an overview of trends and the behaviour across the COVID period (this allows the possibility to answer the first question). For this we analyzed the mobility datasets, extracting weekly patterns and differences between countries. We also evaluated the overal search in Wikipedia articles, as well as the one directly linked to 'Climate change'.
 
 ### Cross-analysis
 
-Do some cross-analysis between the different datasets, to have more insightful takes on what impacts the population's attitude towards climate change (for example the impact of severity of lockdown on specific Wikipedia searches) (this will allow answering questions 2 to 5)
+Analyse interactions between the different datasets, to have more insightful takes on what impacts the population's attitude towards climate change (for example the impact of severity of lockdown on specific Wikipedia searches)(this will allow answering questions 2 to 5). For this we regrouped views of different language and computed the change in number of page views, before, during and after the pandemic, using appropriate normalization and baseline computing. This was further coupled to the impact factor rating, computed based on the mobility of the different countries, also normalized (highest rank was set to 1) to see the impact of a more strict lockdown. 
+For each country, we then annotated the articles with the most change in views, as being positive, negative or neutral and analyzed its association with the impact factor, through a regression analysis.
 
 ### Regroup the results
 
-With the results obtained so far, look at which factors have boosted or not the interest in climate change and try to come up with possible guidelines of what should be done to  avoid an interest lost in ecology, in the context of a potential new crisis (question 6)
-
-### GitHub site
-
-Regroup the results and present them in a GitHub website in an impactful way.  
+With the results obtained so far, we come up with possible guidelines for each country of what should be done to avoid an interest lost in ecology, in the context of a potential new crisis (question 6)
 
 ## Proposed timeline
 
@@ -61,10 +57,10 @@ Regroup the results and present them in a GitHub website in an impactful way.
 
 ## Organization within the team
 
-* **Arthur**: Google trend article cross-analysis
-* **Valentin**: Wikipedia article cross-analysis
-* **Salomé**: Mobility analysis and impact factor relation cross-analysis
-* **Dayan**: GitHub website and Wikipedia API requests
+* **Arthur**:  Preliminary analysis, Website text, Notebook maintenance
+* **Valentin**: Differential topic pageviews analysis, Summary and visualisation by country
+* **Salomé**: Mobility analysis and mpact factor relation cross-analysis, Website text
+* **Dayan**: GitHub website and Wikipedia Massviews requests, Sentiment analysis annotation
 
 
 
